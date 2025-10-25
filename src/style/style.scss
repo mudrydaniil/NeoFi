@@ -3,3 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+$buttonBgColor: #9DFF3A;
+$buttonTextColor: #000000;
+$iconColor: #9DFF3A;
+$bgMainColor: #0F0F0F;
+$bgSecColor: #2E2E2E;
+$titleMainColor: #E5E5E5;
+$textMainColor: #999999;
+$textSecColor: #4D4D4D;
+$textThirdColor: #9DFF3A;
+$gradientColor: linear-gradient(180deg, #75a941 0%, #3a7500 100%);
+
+$fontPrimary: "Alexandria", sans-serif;
+$fontSecond: "Inter", sans-serif;
+
+body {
+    font-family: $fontPrimary;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 120px;
+    margin: 0 auto;
+}
