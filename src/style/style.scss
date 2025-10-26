@@ -71,48 +71,64 @@ body {
     padding: 20px 0;
     background-color: $bgColor;
 
-    .logo {
-        width: 100%;
-        max-width: 254px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        column-gap: 11px;
+    &__burger {
+        display: none;
 
-        @media (max-width: $tablet) {
-            max-width: 180px;
-        }
-
-        &__link {
+        @media (max-width: $mobile) {
             display: flex;
-            text-decoration: none;
-        }
-
-        &__link:hover path {
-            fill: $buttonBgHover;
-        }
-
-        &__link:active path {
-            fill: $iconColorNormal;
-        }
-
-        &__text {
-            @include font(22px, 27px, 500);
-            text-decoration: none;
-            color: $NeofiColor;
-        }
-
-        &__text:hover {
-            color: $iconColorNormal;
-        }
-
-        &__text:active {
-            color: $NeofiColor;
+            background-color: transparent;
+            border: none;
         }
     }
 }
 
+
+
+.logo {
+    width: 100%;
+    max-width: 254px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 11px;
+
+    @media (max-width: $tablet) {
+        max-width: 180px;
+    }
+
+    &__link {
+        display: flex;
+        text-decoration: none;
+    }
+
+    &__link:hover path {
+        fill: $buttonBgHover;
+    }
+
+    &__link:active path {
+        fill: $iconColorNormal;
+    }
+
+    &__text {
+        @include font(22px, 27px, 500);
+        text-decoration: none;
+        color: $NeofiColor;
+    }
+
+    &__text:hover {
+        color: $iconColorNormal;
+    }
+
+    &__text:active {
+        color: $NeofiColor;
+    }
+}
+
 .nav {
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
 
     &__list {
         display: flex;
@@ -130,9 +146,9 @@ body {
         text-transform: capitalize;
         color: $textColor;
 
-        @media (max-width: $tablet) {
-            @include font(14px, 20px, 400);
-        }
+        // @media (max-width: $tablet) {
+        //     @include font(14px, 20px, 400);
+        // }
     }
 
     &__link:hover {
@@ -145,6 +161,10 @@ body {
 }
 
 .cta {
+    @media (max-width: $mobile) {
+        display: none;
+    }
+
     width: 100%;
     max-width: 254px;
     display: flex;
@@ -162,9 +182,9 @@ body {
         text-transform: capitalize;
         color: $textColor;
 
-        @media (max-width: $tablet) {
-            @include font(14px, 20px, 400);
-        }
+        // @media (max-width: $tablet) {
+        //     @include font(14px, 20px, 400);
+        // }
     }
 
     &__link:hover {
@@ -186,11 +206,16 @@ body {
         border: none;
         cursor: pointer;
 
+        // @media (max-width: $tablet) {
+        //     @include font(14px, 20px, 400);
+        //     padding: 6px 0;
+        //     max-width: 121px;
+        // }
+
         @media (max-width: $tablet) {
-            @include font(14px, 20px, 400);
-            padding: 6px 0;
-            max-width: 121px;
+            display: none;
         }
+
     }
 
     &__btn:hover {
