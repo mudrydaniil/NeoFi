@@ -219,3 +219,9 @@ body {
         background-color: $buttonBgNormal;
     }
 }
+
+.banner .container {
+    display: flex;
+    
+    justify-content: space-between;
+}

@@ -176,4 +176,9 @@ body {
 }
 .cta__btn:active {
   background-color: #9DFF3A;
+}
+
+.banner .container {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
