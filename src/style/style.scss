@@ -57,9 +57,34 @@ body {
     font-family: $fontPrimary;
 }
 
-%title-styles {}
+%title-banner-styles {
+    text-transform: capitalize;
+    color: $titleColor;
+    line-height: 110%;
+}
 
-%text-styles {}
+%text-banner-styles {
+    text-transform: capitalize;
+    color: $textColor;
+    line-height: 140%;
+}
+
+.title {
+    @include font(48px, 100%, 400);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: $titleColor;
+    text-align: center;
+}
+
+.text {
+    @include font(18px, 140%, 400);
+    text-align: center;
+    color: $textColor;
+    text-transform: capitalize;
+}
 
 .header .container {
     display: flex;
@@ -106,14 +131,6 @@ body {
     }
 }
 
-// .logo:hover path {
-//     fill: $buttonBgHover;
-// }
-
-// .logo:active path {
-//     fill: $iconColorNormal;
-// }
-
 .nav {
 
     @media (max-width: $mobile) {
@@ -135,10 +152,6 @@ body {
         text-decoration: none;
         text-transform: capitalize;
         color: $textColor;
-
-        // @media (max-width: $tablet) {
-        //     @include font(14px, 20px, 400);
-        // }
     }
 
     &__link:hover {
@@ -171,10 +184,6 @@ body {
         text-decoration: none;
         text-transform: capitalize;
         color: $textColor;
-
-        // @media (max-width: $tablet) {
-        //     @include font(14px, 20px, 400);
-        // }
     }
 
     &__link:hover {
@@ -195,12 +204,6 @@ body {
         color: $buttonTextNormal;
         border: none;
         cursor: pointer;
-
-        // @media (max-width: $tablet) {
-        //     @include font(14px, 20px, 400);
-        //     padding: 6px 0;
-        //     max-width: 121px;
-        // }
 
         @media (max-width: $tablet) {
             display: none;
