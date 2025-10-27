@@ -69,7 +69,6 @@ body {
 %text-banner-styles {
     font-family: $fontSecond;
     color: $textColor;
-    line-height: 140%;
 }
 
 .title {
@@ -241,7 +240,7 @@ body {
         @extend %title-banner-styles;
         @include font(64px, 110%, 700);
         max-width: 661px;
-        margin-bottom: 24px
+        margin-bottom: 24px;
     }
 
     &__text {
