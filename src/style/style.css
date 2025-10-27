@@ -217,6 +217,16 @@ body {
   max-width: 583px;
   margin-bottom: 40px;
 }
+.banner__wrapper-image {
+  width: 512px;
+  height: 512px;
+}
+.banner__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .status-tag {
   display: flex;
