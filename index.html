@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeoFi</title>
-    <link rel="stylesheet" href="/NeoFi/src/style/style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/NeoFi/src/style/style.css">
 </head>
 
 <body>
-
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16 32C24.8366 32 32 24.8365 32 16C32 7.16345 24.8366 0 16 0C7.16343 0 0 7.16345 0 16C0 24.8365 7.16343 32 16 32ZM20.9915 7.45347C21.2344 6.59044 20.3969 6.0801 19.632 6.62504L8.95449 14.2317C8.12497 14.8226 8.25545 16 9.15049 16H11.9622V15.9782H17.442L12.977 17.5537L11.0086 24.5465C10.7656 25.4096 11.6031 25.9199 12.368 25.3749L23.0455 17.7684C23.8751 17.1774 23.7445 16 22.8495 16H18.5857L20.9915 7.45347Z"
+                        fill="#9DFF3A" />
+                </svg>
+                NeoFi
+            </a>
+            <button class="header__burger" aria-label="Открыть меню">
+                <svg class="header__burger-icon" width="18" height="12" viewBox="0 0 18 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 12V10H18V12H0ZM0 7V5H18V7H0ZM0 2V0H18V2H0Z" fill="#FFFFFF" />
+                </svg>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Features</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Testimonial</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cta">
+                <a href="#" class="cta__link">Log in</a>
+                <button class="cta__btn">Try For Free</button>
+            </div>
+        </div>
+    </header>
+    <section class="banner"></section>
 </body>
 
 </html>

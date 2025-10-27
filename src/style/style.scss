@@ -3,3 +3,216 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+$buttonBgNormal: #9DFF3A;
+$buttonTextNormal: #000000;
+$buttonBgHover: #FFFFFF;
+
+$bgColor: #000000;
+$bgSecColor: #0F0F0F;
+
+$titleColor: #E5E5E5;
+
+$NeofiColor: #FFFFFF;
+$LoginColor: #FFFFFF;
+
+$textColorHover: #E5E5E5;
+
+$textColor: #999999;
+$textSecColor: #4D4D4D;
+$textGreenColor: #9DFF3A;
+
+$iconColorNormal: #9DFF3A;
+$iconColorHover: #FFFFFF;
+$gradientColor: linear-gradient(180deg, #75a941 0%, #3a7500 100%);
+
+$fontPrimary: "Alexandria", sans-serif;
+$fontSecond: "Inter", sans-serif;
+
+$tablet: 1024px;
+$mobile: 767px;
+
+body {
+    font-family: $fontPrimary;
+}
+
+.container {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @media (max-width: $tablet) {
+        padding: 0 20px;
+    }
+}
+
+@mixin font($fontSize, $lineHeight, $fontWeight) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+}
+
+%btn-styles {
+    width: 100%;
+    font-family: $fontPrimary;
+}
+
+%title-styles {}
+
+%text-styles {}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    padding: 20px 0;
+    background-color: $bgColor;
+
+    &__burger {
+        display: none;
+
+        @media (max-width: $mobile) {
+            display: flex;
+            background-color: transparent;
+            border: none;
+        }
+    }
+}
+
+.logo {
+    @include font(22px, 27px, 500);
+    width: 100%;
+    max-width: 254px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 11px;
+    text-decoration: none;
+    color: $NeofiColor;
+
+    @media (max-width: $tablet) {
+        max-width: 180px;
+    }
+
+    svg:hover path {
+        fill: $buttonBgHover;
+    }
+
+    svg:active path {
+        fill: $iconColorNormal;
+    }
+}
+
+// .logo:hover path {
+//     fill: $buttonBgHover;
+// }
+
+// .logo:active path {
+//     fill: $iconColorNormal;
+// }
+
+.nav {
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 30px;
+        list-style: none;
+    }
+
+    &__item {
+        width: 100%;
+    }
+
+    &__link {
+        @include font(16px, 20px, 400);
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $textColor;
+
+        // @media (max-width: $tablet) {
+        //     @include font(14px, 20px, 400);
+        // }
+    }
+
+    &__link:hover {
+        color: $textColorHover;
+    }
+
+    &__link:active {
+        color: $textColor;
+    }
+}
+
+.cta {
+    @media (max-width: $mobile) {
+        display: none;
+    }
+
+    width: 100%;
+    max-width: 254px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 16px;
+
+    @media (max-width: $tablet) {
+        max-width: 180px;
+    }
+
+    &__link {
+        @include font(16px, 20px, 400);
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $textColor;
+
+        // @media (max-width: $tablet) {
+        //     @include font(14px, 20px, 400);
+        // }
+    }
+
+    &__link:hover {
+        color: $LoginColor;
+    }
+
+    &__link:active {
+        color: $textColor;
+    }
+
+    &__btn {
+        @include font(16px, 20px, 400);
+        @extend %btn-styles;
+        border-radius: 40px;
+        padding: 10px 0;
+        max-width: 141px;
+        background-color: $buttonBgNormal;
+        color: $buttonTextNormal;
+        border: none;
+        cursor: pointer;
+
+        // @media (max-width: $tablet) {
+        //     @include font(14px, 20px, 400);
+        //     padding: 6px 0;
+        //     max-width: 121px;
+        // }
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+
+    }
+
+    &__btn:hover {
+        background-color: $buttonBgHover;
+    }
+
+    &__btn:active {
+        background-color: $buttonBgNormal;
+    }
+}
