@@ -11,15 +11,17 @@ $buttonBgHover: #FFFFFF;
 $bgColor: #000000;
 $bgSecColor: #0F0F0F;
 
+$borderColor: #4D4D4D;
+
 $titleColor: #E5E5E5;
 
 $NeofiColor: #FFFFFF;
 $LoginColor: #FFFFFF;
 
 $textColorHover: #E5E5E5;
-
+$textBtnColor: #E5E5E5;
 $textColor: #999999;
-$textSecColor: #4D4D4D;
+$textGray4Color: #4D4D4D;
 $textGreenColor: #9DFF3A;
 
 $iconColorNormal: #9DFF3A;
@@ -54,17 +56,18 @@ body {
 
 %btn-styles {
     width: 100%;
+    cursor: pointer;
+    color: $buttonTextNormal;
     font-family: $fontPrimary;
 }
 
 %title-banner-styles {
     text-transform: capitalize;
     color: $titleColor;
-    line-height: 110%;
 }
 
 %text-banner-styles {
-    text-transform: capitalize;
+    font-family: $fontSecond;
     color: $textColor;
     line-height: 140%;
 }
@@ -203,7 +206,6 @@ body {
         background-color: $buttonBgNormal;
         color: $buttonTextNormal;
         border: none;
-        cursor: pointer;
 
         @media (max-width: $tablet) {
             display: none;
@@ -222,6 +224,87 @@ body {
 
 .banner .container {
     display: flex;
-    
     justify-content: space-between;
+}
+
+.banner {
+    padding: 88px 0;
+    background-color: $bgColor;
+
+    &__intro {
+        width: 100%;
+        max-width: 688px;
+        margin: 69.5px 0;
+    }
+
+    &__title {
+        @extend %title-banner-styles;
+        @include font(64px, 110%, 700);
+        max-width: 661px;
+        margin-bottom: 24px
+    }
+
+    &__text {
+        @extend %text-banner-styles;
+        @include font(20px, 140%, 400);
+        max-width: 583px;
+        margin-bottom: 40px;
+    }
+}
+
+.status-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    width: 100%;
+    max-width: 137px;
+    padding: 9px 0;
+    border: 1px solid $borderColor;
+    border-radius: 24px;
+    margin-bottom: 24px;
+
+    &__text {
+        @include font(14px, 17px, 400);
+        color: $textGreenColor;
+        backdrop-filter: blur(40px);
+    }
+}
+
+.actions {
+    max-width: 361px;
+    display: flex;
+    column-gap: 20px;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font(18px, 22px, 400);
+        @extend %btn-styles;
+        max-width: 151px;
+        border: none;
+        border-radius: 40px;
+        padding: 14px 0;
+        background-color: $buttonBgNormal;
+        text-decoration: none;
+    }
+
+    &__btn {
+        @extend %btn-styles;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 8px;
+        max-width: 190px;
+        padding: 14px 0;
+        border: 1px solid $borderColor;
+        border-radius: 24px;
+        background-color: $bgColor;
+    }
+
+    &__text {
+        @include font(18px, 22px, 400);
+        color: $textBtnColor;
+    }
 }
