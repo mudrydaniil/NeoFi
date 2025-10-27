@@ -37,8 +37,8 @@ body {
 }
 
 .container {
-    max-width: 1440px;
-    padding: 0 120px;
+    max-width: 1240px;
+    padding: 0 20px;
     margin: 0 auto;
 
     @media (max-width: $tablet) {
@@ -82,47 +82,37 @@ body {
     }
 }
 
-
-
 .logo {
+    @include font(22px, 27px, 500);
     width: 100%;
     max-width: 254px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     column-gap: 11px;
+    text-decoration: none;
+    color: $NeofiColor;
 
     @media (max-width: $tablet) {
         max-width: 180px;
     }
 
-    &__link {
-        display: flex;
-        text-decoration: none;
-    }
-
-    &__link:hover path {
+    svg:hover path {
         fill: $buttonBgHover;
     }
 
-    &__link:active path {
+    svg:active path {
         fill: $iconColorNormal;
     }
-
-    &__text {
-        @include font(22px, 27px, 500);
-        text-decoration: none;
-        color: $NeofiColor;
-    }
-
-    &__text:hover {
-        color: $iconColorNormal;
-    }
-
-    &__text:active {
-        color: $NeofiColor;
-    }
 }
+
+// .logo:hover path {
+//     fill: $buttonBgHover;
+// }
+
+// .logo:active path {
+//     fill: $iconColorNormal;
+// }
 
 .nav {
 

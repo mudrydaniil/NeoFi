@@ -9,8 +9,8 @@ body {
 }
 
 .container {
-  max-width: 1440px;
-  padding: 0 120px;
+  max-width: 1240px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 @media (max-width: 1024px) {
@@ -46,6 +46,9 @@ body {
 }
 
 .logo {
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 500;
   width: 100%;
   max-width: 254px;
   display: flex;
@@ -53,34 +56,19 @@ body {
   align-items: center;
   -moz-column-gap: 11px;
        column-gap: 11px;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 @media (max-width: 1024px) {
   .logo {
     max-width: 180px;
   }
 }
-.logo__link {
-  display: flex;
-  text-decoration: none;
-}
-.logo__link:hover path {
+.logo svg:hover path {
   fill: #FFFFFF;
 }
-.logo__link:active path {
+.logo svg:active path {
   fill: #9DFF3A;
-}
-.logo__text {
-  font-size: 22px;
-  line-height: 27px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #FFFFFF;
-}
-.logo__text:hover {
-  color: #9DFF3A;
-}
-.logo__text:active {
-  color: #FFFFFF;
 }
 
 @media (max-width: 767px) {
