@@ -42,10 +42,6 @@ body {
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
-
-    @media (max-width: $tablet) {
-        padding: 0 20px;
-    }
 }
 
 @mixin font($fontSize, $lineHeight, $fontWeight) {
@@ -224,6 +220,11 @@ body {
 .banner .container {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .banner {
@@ -231,9 +232,21 @@ body {
     background-color: $bgColor;
 
     &__intro {
-        width: 100%;
-        max-width: 688px;
-        margin: 69.5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $tablet) {
+            max-width: 530px;
+        }
+
+        @media (max-width: $mobile) {
+            max-width: 361px;
+            align-items: center;
+            text-align: center;
+        }
+
+
     }
 
     &__title {
@@ -241,6 +254,18 @@ body {
         @include font(64px, 110%, 700);
         max-width: 661px;
         margin-bottom: 24px;
+
+        @media (max-width: $tablet) {
+            @include font(48px, 110%, 600);
+            max-width: 520px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: $mobile) {
+            @include font(40px, 110%, 500);
+            max-width: 361px;
+            margin-bottom: 16px;
+        }
     }
 
     &__text {
@@ -248,17 +273,38 @@ body {
         @include font(20px, 140%, 400);
         max-width: 583px;
         margin-bottom: 40px;
+
+        @media (max-width: $tablet) {
+            @include font(18px, 20px, 400);
+            max-width: 500px;
+            margin-bottom: 36px;
+        }
+
+        @media (max-width: $mobile) {
+            @include font(16px, 20px, 400);
+            font-family: $fontPrimary;
+            max-width: 361px;
+            margin-bottom: 32px;
+        }
     }
 
     &__wrapper-image {
-        width: 512px;
-        height: 512px;
+        min-width: 300px;
+        min-height: 300px;
     }
 
     &__image {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
+
+        @media (max-width: $tablet) {
+            max-width: 400px;
+        }
+
+        @media (max-width: $mobile) {
+            max-width: 300px;
+        }
     }
 }
 
@@ -274,6 +320,14 @@ body {
     border-radius: 24px;
     margin-bottom: 24px;
 
+    @media (max-width: $tablet) {
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: $mobile) {
+        margin-bottom: 16px;
+    }
+
     &__text {
         @include font(14px, 17px, 400);
         color: $textGreenColor;
@@ -282,9 +336,18 @@ body {
 }
 
 .actions {
+    width: 100%;
     max-width: 361px;
     display: flex;
     column-gap: 20px;
+
+    @media (max-width:$mobile) {
+        max-width: 178px;
+        flex-direction: column;
+        row-gap: 20px;
+        margin-bottom: 32px;
+        align-items: center;
+    }
 
     &__link {
         display: flex;
@@ -298,6 +361,16 @@ body {
         padding: 14px 0;
         background-color: $buttonBgNormal;
         text-decoration: none;
+
+        @media (max-width:$tablet) {
+            @include font(16px, 20px, 400);
+            max-width: 140px;
+            padding: 14px;
+        }
+    }
+
+    &__link:hover {
+        background-color: $buttonBgHover;
     }
 
     &__btn {
@@ -309,12 +382,28 @@ body {
         max-width: 190px;
         padding: 14px 0;
         border: 1px solid $borderColor;
-        border-radius: 24px;
+        border-radius: 40px;
         background-color: $bgColor;
+
+        @media (max-width:$tablet) {
+            @include font(16px, 20px, 400);
+            max-width: 178px;
+            padding: 15px;
+        }
     }
 
     &__text {
         @include font(18px, 22px, 400);
+        max-width: 112px;
         color: $textBtnColor;
+
+        @media (max-width:$tablet) {
+            @include font(16px, 20px, 400);
+            max-width: 100px;
+        }
+    }
+
+    &__text:hover {
+        color: $NeofiColor;
     }
 }
