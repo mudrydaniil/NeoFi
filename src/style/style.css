@@ -398,4 +398,16 @@ body {
   max-width: 941px;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .partner {
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+    gap: 15px 100px;
+  }
+}
+.partner__link {
+  display: block;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

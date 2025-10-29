@@ -422,4 +422,16 @@ body {
     max-width: 941px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width:$tablet) {
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 600px;
+        gap: 15px 100px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+    }
 }
