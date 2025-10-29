@@ -401,13 +401,33 @@ body {
 }
 @media (max-width: 1024px) {
   .partner {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .partner {
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 600px;
-    gap: 15px 100px;
+    gap: 16px 20px;
   }
 }
 .partner__link {
-  display: block;
+  display: flex;
   text-decoration: none;
+}
+.partner__logo {
+  width: 129px;
+  height: 32px;
+}
+@media (max-width: 1024px) {
+  .partner__logo {
+    width: 113px;
+    height: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .partner__logo {
+    width: 97px;
+    height: 24px;
+  }
 }/*# sourceMappingURL=style.css.map */
