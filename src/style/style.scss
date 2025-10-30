@@ -5,7 +5,7 @@
 }
 
 $btnBg: #9DFF3A;
-$btnText: #000000;
+$btnSecondaryText: #000000;
 $btnBgHover: #FFFFFF;
 $bgPrimary: #000000;
 $bgSecondary: #0F0F0F;
@@ -13,7 +13,7 @@ $borderColor: #4D4D4D;
 $titleColor: #E5E5E5;
 $neofiColor: #FFFFFF;
 $textHover: #E5E5E5;
-$btnText: #E5E5E5;
+$btnPrimaryText: #E5E5E5;
 $textPrimary: #999999;
 $textGreen: #9DFF3A;
 $iconNormal: #9DFF3A;
@@ -44,7 +44,7 @@ body {
 %btn-styles {
     width: 100%;
     cursor: pointer;
-    color: $btnText;
+    color: $btnSecondaryText;
     font-family: $fontPrimary;
 }
 
@@ -102,7 +102,7 @@ body {
     }
 
     svg:hover path {
-        fill: $buttonBgHover;
+        fill: $btnBgHover;
     }
 
     svg:active path {
@@ -180,7 +180,7 @@ body {
         padding: 10px 0;
         max-width: 141px;
         background-color: $btnBg;
-        color: $btnText;
+        color: $btnSecondaryText;
         border: none;
 
         @media (max-width: $tablet) {
@@ -190,7 +190,7 @@ body {
     }
 
     &__btn:hover {
-        background-color: $buttonBgHover;
+        background-color: $btnBgHover;
     }
 
     &__btn:active {
@@ -291,7 +291,7 @@ body {
     }
 }
 
-.status-tag {
+.status {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -353,7 +353,7 @@ body {
     }
 
     &__link:hover {
-        background-color: $buttonBgHover;
+        background-color: $btnBgHover;
     }
 
     &__btn {
@@ -378,7 +378,7 @@ body {
     &__text {
         @include font(18px, 22px, 400);
         max-width: 112px;
-        color: $btnText;
+        color: $btnPrimaryText;
 
         @media (max-width:$tablet) {
             @include font(16px, 20px, 400);
@@ -392,7 +392,7 @@ body {
 }
 
 .partners {
-    background-color: $bgSecondaryColor;
+    background-color: $bgSecondary;
     padding: 40px 0;
 
     &__text {
