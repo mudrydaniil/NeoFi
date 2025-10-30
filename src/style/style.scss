@@ -4,28 +4,19 @@
     box-sizing: border-box;
 }
 
-$buttonBgNormal: #9DFF3A;
-$buttonTextNormal: #000000;
-$buttonBgHover: #FFFFFF;
-
-$bgColor: #000000;
-$bgSecColor: #0F0F0F;
-
+$btnBg: #9DFF3A;
+$btnText: #000000;
+$btnBgHover: #FFFFFF;
+$bgPrimary: #000000;
+$bgSecondary: #0F0F0F;
 $borderColor: #4D4D4D;
-
 $titleColor: #E5E5E5;
-
-$NeofiColor: #FFFFFF;
-$LoginColor: #FFFFFF;
-
-$textColorHover: #E5E5E5;
-$textBtnColor: #E5E5E5;
-$textColor: #999999;
-$textGray4Color: #4D4D4D;
-$textGreenColor: #9DFF3A;
-
-$iconColorNormal: #9DFF3A;
-$iconColorHover: #FFFFFF;
+$neofiColor: #FFFFFF;
+$textHover: #E5E5E5;
+$btnText: #E5E5E5;
+$textPrimary: #999999;
+$textGreen: #9DFF3A;
+$iconNormal: #9DFF3A;
 $gradientColor: linear-gradient(180deg, #75a941 0%, #3a7500 100%);
 
 $fontPrimary: "Alexandria", sans-serif;
@@ -53,7 +44,7 @@ body {
 %btn-styles {
     width: 100%;
     cursor: pointer;
-    color: $buttonTextNormal;
+    color: $btnText;
     font-family: $fontPrimary;
 }
 
@@ -70,7 +61,7 @@ body {
 %text-styles {
     @include font(18px, 140%, 400);
     text-align: center;
-    color: $textColor;
+    color: $textPrimary;
     text-transform: capitalize;
 }
 
@@ -82,7 +73,7 @@ body {
 
 .header {
     padding: 20px 0;
-    background-color: $bgColor;
+    background-color: $bgPrimary;
 
     &__burger {
         display: none;
@@ -104,7 +95,7 @@ body {
     align-items: center;
     column-gap: 11px;
     text-decoration: none;
-    color: $NeofiColor;
+    color: $neofiColor;
 
     @media (max-width: $tablet) {
         max-width: 180px;
@@ -115,7 +106,7 @@ body {
     }
 
     svg:active path {
-        fill: $iconColorNormal;
+        fill: $iconNormal;
     }
 }
 
@@ -139,15 +130,15 @@ body {
         @include font(16px, 20px, 400);
         text-decoration: none;
         text-transform: capitalize;
-        color: $textColor;
+        color: $textPrimary;
     }
 
     &__link:hover {
-        color: $textColorHover;
+        color: $textHover;
     }
 
     &__link:active {
-        color: $textColor;
+        color: $textPrimary;
     }
 }
 
@@ -171,15 +162,15 @@ body {
         @include font(16px, 20px, 400);
         text-decoration: none;
         text-transform: capitalize;
-        color: $textColor;
+        color: $textPrimary;
     }
 
     &__link:hover {
-        color: $LoginColor;
+        color: $neofiColor;
     }
 
     &__link:active {
-        color: $textColor;
+        color: $textPrimary;
     }
 
     &__btn {
@@ -188,8 +179,8 @@ body {
         border-radius: 40px;
         padding: 10px 0;
         max-width: 141px;
-        background-color: $buttonBgNormal;
-        color: $buttonTextNormal;
+        background-color: $btnBg;
+        color: $btnText;
         border: none;
 
         @media (max-width: $tablet) {
@@ -203,7 +194,7 @@ body {
     }
 
     &__btn:active {
-        background-color: $buttonBgNormal;
+        background-color: $btnBg;
     }
 }
 
@@ -219,7 +210,7 @@ body {
 
 .banner {
     padding: 88px 0;
-    background-color: $bgColor;
+    background-color: $bgPrimary;
 
     &__intro {
         display: flex;
@@ -261,7 +252,7 @@ body {
 
     &__text {
         font-family: $fontSecond;
-        color: $textColor;
+        color: $textPrimary;
         @include font(20px, 140%, 400);
         max-width: 583px;
         margin-bottom: 40px;
@@ -322,7 +313,7 @@ body {
 
     &__text {
         @include font(14px, 17px, 400);
-        color: $textGreenColor;
+        color: $textGreen;
         backdrop-filter: blur(40px);
     }
 }
@@ -351,7 +342,7 @@ body {
         border: none;
         border-radius: 40px;
         padding: 14px 0;
-        background-color: $buttonBgNormal;
+        background-color: $btnBg;
         text-decoration: none;
 
         @media (max-width:$tablet) {
@@ -375,7 +366,7 @@ body {
         padding: 14px 0;
         border: 1px solid $borderColor;
         border-radius: 40px;
-        background-color: $bgColor;
+        background-color: $bgPrimary;
 
         @media (max-width:$tablet) {
             @include font(16px, 20px, 400);
@@ -387,7 +378,7 @@ body {
     &__text {
         @include font(18px, 22px, 400);
         max-width: 112px;
-        color: $textBtnColor;
+        color: $btnText;
 
         @media (max-width:$tablet) {
             @include font(16px, 20px, 400);
@@ -396,17 +387,17 @@ body {
     }
 
     &__text:hover {
-        color: $NeofiColor;
+        color: $neofiColor;
     }
 }
 
 .partners {
-    background-color: $bgSecColor;
+    background-color: $bgSecondaryColor;
     padding: 40px 0;
 
     &__text {
         @include font(16px, 20px, 400);
-        color: $textColor;
+        color: $textPrimary;
         margin-bottom: 40px;
     }
 }
