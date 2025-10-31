@@ -267,12 +267,17 @@ body {
   justify-content: center;
   -moz-column-gap: 8px;
        column-gap: 8px;
-  width: 100%;
   max-width: 137px;
   padding: 9px 0;
   border: 1px solid #4D4D4D;
   border-radius: 24px;
   margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #9DFF3A;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
 }
 @media (max-width: 1024px) {
   .status {
@@ -283,14 +288,6 @@ body {
   .status {
     margin-bottom: 16px;
   }
-}
-.status__text {
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 400;
-  color: #9DFF3A;
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
 }
 
 .actions {
