@@ -17,6 +17,7 @@ $btnPrimaryText: #E5E5E5;
 $textPrimary: #999999;
 $textGreen: #9DFF3A;
 $iconNormal: #9DFF3A;
+$bgFeature: rgba(255, 255, 255, 0.04);
 $gradientColor: linear-gradient(180deg, #75a941 0%, #3a7500 100%);
 
 $fontPrimary: "Alexandria", sans-serif;
@@ -50,19 +51,20 @@ body {
 
 %title-styles {
     @include font(48px, 100%, 400);
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 100%;
     text-transform: capitalize;
     color: $titleColor;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 %text-styles {
+    font-family: $fontSecond;
     @include font(18px, 140%, 400);
     text-align: center;
     color: $textPrimary;
     text-transform: capitalize;
+    max-width: 644px;
+    margin: 0 auto;
 }
 
 .header .container {
@@ -299,11 +301,16 @@ body {
     max-width: 137px;
     padding: 9px 0;
     border: 1px solid $borderColor;
+    margin: 0 auto 20px;
     border-radius: 24px;
-    margin-bottom: 24px;
     @include font(14px, 17px, 400);
     color: $textGreen;
+    background-color: $bgPrimary;
     backdrop-filter: blur(40px);
+
+    &_linear {
+        margin: 0 0 24px 0;
+    }
 
     @media (max-width: $tablet) {
         margin-bottom: 20px;
@@ -439,5 +446,63 @@ body {
             width: 97px;
             height: 24px;
         }
+    }
+}
+
+.features {
+    padding: 80px 0;
+    background-color: $bgPrimary;
+
+    &__status {
+        padding: 11px 0;
+        max-width: 94px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        @extend %title-styles;
+    }
+
+    &__text {
+        @extend %text-styles;
+        margin-bottom: 80px;
+    }
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: repeat(3, 384px);
+    column-gap: 24px;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        padding: 48px 36px;
+        background: $bgFeature;
+    }
+
+    &__wrapper-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 48px;
+        margin-bottom: 36px;
+    }
+
+    &__title {
+        @include font(20px, 140%, 400);
+        text-align: center;
+        color: $titleColor;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        @include font(16px, 20px, 400);
+        color: $textPrimary;
+        text-align: center;
     }
 }
