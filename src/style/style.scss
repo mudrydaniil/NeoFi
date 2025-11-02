@@ -9,6 +9,7 @@ $btnSecondaryText: #000000;
 $btnBgHover: #FFFFFF;
 $bgPrimary: #000000;
 $bgSecondary: #0F0F0F;
+$borderStatus: #2E2E2E;
 $borderColor: #4D4D4D;
 $titleColor: #E5E5E5;
 $neofiColor: #FFFFFF;
@@ -215,6 +216,7 @@ body {
     background-color: $bgPrimary;
 
     &__intro {
+        // position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -274,13 +276,14 @@ body {
     }
 
     &__wrapper-image {
+        aspect-ratio: 1 / 1;
         min-width: 300px;
         min-height: 300px;
     }
 
     &__image {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
 
         @media (max-width: $tablet) {
@@ -299,16 +302,28 @@ body {
     justify-content: center;
     column-gap: 8px;
     max-width: 137px;
+    // max-width: 135px;
     padding: 9px 0;
-    border: 1px solid $borderColor;
     margin: 0 auto 20px;
+    border: 1px solid $borderStatus;
     border-radius: 24px;
     @include font(14px, 17px, 400);
     color: $textGreen;
     background-color: $bgPrimary;
     backdrop-filter: blur(40px);
 
-    &_linear {
+    // &__bg {
+    //     width: calc(100% - 524px);
+    //     height: calc(100% - 475px);
+    //     position: absolute;
+    //     border-radius: 24px;
+    //     background: linear-gradient(to right, #4D4D4D 0%, #B3B3B3 60%, #B3B3B3 100%);
+    //     top: 69px;
+    //     left: -1px;
+    // }
+
+    &_line {
+        // border: none;
         margin: 0 0 24px 0;
     }
 
@@ -319,7 +334,6 @@ body {
     @media (max-width: $mobile) {
         margin-bottom: 16px;
     }
-
 }
 
 .actions {
@@ -455,7 +469,7 @@ body {
 
     &__status {
         padding: 11px 0;
-        max-width: 94px;
+        max-width: 100px;
         margin-bottom: 20px;
     }
 
