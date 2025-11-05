@@ -703,6 +703,7 @@ body {
 
 .promo {
     display: grid;
+    grid-auto-rows: auto;
     row-gap: 40px;
     max-width: 622px;
 
