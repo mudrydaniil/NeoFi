@@ -411,6 +411,23 @@ body {
     }
 }
 
+.features .container {
+    position: relative;
+}
+
+.features .container::before {
+    content: '';
+    width: 49%;
+    height: 82%;
+    left: 50%;
+    top: 36px;
+    transform: translateX(-50%);
+    background: rgba(74, 90, 236, 0.06);
+    filter: blur(139.9px);
+    z-index: 0;
+    position: absolute;
+}
+
 .features {
     padding: 80px 0;
     background-color: $bgPrimary;
