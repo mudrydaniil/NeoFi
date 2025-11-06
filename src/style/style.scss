@@ -45,6 +45,26 @@ body {
     font-weight: $fontWeight;
 }
 
+%bg-white-styles {
+    position: absolute;
+    background: $bgFeature;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+%bg-styles {
+    position: absolute;
+    width: 49%;
+    height: 82%;
+    left: 50%;
+    top: 36px;
+    transform: translateX(-50%);
+    background: rgba(74, 90, 236, 0.06);
+    filter: blur(139.9px);
+    z-index: 2;
+}
+
 %btn-styles {
     width: 100%;
     cursor: pointer;
@@ -205,6 +225,7 @@ body {
 }
 
 .banner .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -212,6 +233,13 @@ body {
     @media (max-width: $mobile) {
         display: block;
     }
+}
+
+.banner .container::before {
+    content: '';
+    left: -15%;
+    background: rgba(74, 90, 236, 0.16);
+    @extend %bg-styles;
 }
 
 .banner {
@@ -417,15 +445,7 @@ body {
 
 .features .container::before {
     content: '';
-    width: 49%;
-    height: 82%;
-    left: 50%;
-    top: 36px;
-    transform: translateX(-50%);
-    background: rgba(74, 90, 236, 0.06);
-    filter: blur(139.9px);
-    z-index: 0;
-    position: absolute;
+    @extend %bg-styles;
 }
 
 .features {
@@ -513,6 +533,15 @@ body {
         position: relative;
     }
 
+    &__block::before {
+        content: '';
+        position: absolute;
+        background: $bgFeature;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
     &__bg {
         position: absolute;
         width: calc(100% + 2px);
@@ -559,6 +588,15 @@ body {
         color: $textPrimary;
         text-align: center;
     }
+}
+
+.statistics .container {
+    position: relative;
+}
+
+.statistics .container::before {
+    content: '';
+    @extend %bg-styles;
 }
 
 .statistics {
@@ -731,6 +769,11 @@ body {
 
     &__block {
         position: relative;
+    }
+
+    &__block::before {
+        content: '';
+        @extend %bg-white-styles;
     }
 
     &__content {
