@@ -894,4 +894,12 @@ body {
   line-height: 22px;
   font-weight: 400;
   background: #9DFF3A;
+}
+
+.footer {
+  padding: 120px 0 40px;
+  background: #000000;
+}
+.footer__logo {
+  max-width: 107px;
 }/*# sourceMappingURL=style.css.map */

@@ -925,3 +925,12 @@ body {
         background: $btnBg;
     }
 }
+
+.footer {
+    padding: 120px 0 40px;
+    background: $bgPrimary;
+
+    &__logo {
+        max-width: 107px;
+    }
+}
