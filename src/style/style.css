@@ -820,11 +820,14 @@ body {
   background: #0F0F0F;
 }
 .testimonial__info {
-  max-width: 644px;
-  margin: 0 auto 72px;
+  margin-bottom: 72px;
 }
 .testimonial__status {
   padding: 11px 0;
   max-width: 121px;
   margin: 0 auto 20px;
+}
+.testimonial__text {
+  max-width: 644px;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

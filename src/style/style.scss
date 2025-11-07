@@ -844,8 +844,7 @@ body {
     background: $bgSecondary;
 
     &__info {
-        max-width: 644px;
-        margin: 0 auto 72px;
+        margin-bottom: 72px;
     }
 
     &__status {
@@ -859,7 +858,8 @@ body {
     }
 
     &__text {
+        max-width: 644px;
         @extend %text-styles;
-        
+        margin: 0 auto;
     }
 }
