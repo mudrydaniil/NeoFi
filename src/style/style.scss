@@ -134,6 +134,10 @@ body {
     svg:active path {
         fill: $iconNormal;
     }
+
+    &__text {
+        padding: 2.5px 0;
+    }
 }
 
 .nav {
@@ -926,11 +930,56 @@ body {
     }
 }
 
+.footer .container {
+    display: grid;
+    grid-template-columns: 690px 1fr;
+    column-gap: 126px;
+}
+
 .footer {
     padding: 120px 0 40px;
     background: $bgPrimary;
 
+    &__content {
+        display: grid;
+        grid-template-columns: 107px 1fr;
+        column-gap: 92px;
+    }
+
     &__logo {
-        max-width: 107px;
+        align-items: flex-start;
+    }
+
+    &__columns {
+        display: grid;
+        grid-template-columns: 102px 84px 1fr;
+        column-gap: 92px;
+    }
+
+    // &__column {}
+
+    &__title {
+        font-family: $fontSecond;
+        @include font(20px, 140%, 400);
+        color: $titleColor;
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__item {
+        margin-bottom: 8px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__link {
+        @include font(14px, 17px, 400);
+        text-decoration: none;
+        color: $textPrimary;
     }
 }

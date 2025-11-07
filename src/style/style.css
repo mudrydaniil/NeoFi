@@ -110,6 +110,9 @@ body {
 .logo svg:active path {
   fill: #9DFF3A;
 }
+.logo__text {
+  padding: 2.5px 0;
+}
 
 @media (max-width: 767px) {
   .nav {
@@ -896,10 +899,53 @@ body {
   background: #9DFF3A;
 }
 
+.footer .container {
+  display: grid;
+  grid-template-columns: 690px 1fr;
+  -moz-column-gap: 126px;
+       column-gap: 126px;
+}
+
 .footer {
   padding: 120px 0 40px;
   background: #000000;
 }
+.footer__content {
+  display: grid;
+  grid-template-columns: 107px 1fr;
+  -moz-column-gap: 92px;
+       column-gap: 92px;
+}
 .footer__logo {
-  max-width: 107px;
+  align-items: flex-start;
+}
+.footer__columns {
+  display: grid;
+  grid-template-columns: 102px 84px 1fr;
+  -moz-column-gap: 92px;
+       column-gap: 92px;
+}
+.footer__title {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 400;
+  color: #E5E5E5;
+  margin-bottom: 24px;
+}
+.footer__list {
+  list-style-type: none;
+}
+.footer__item {
+  margin-bottom: 8px;
+}
+.footer__item:last-child {
+  margin-bottom: 0;
+}
+.footer__link {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #999999;
 }/*# sourceMappingURL=style.css.map */
