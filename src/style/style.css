@@ -34,14 +34,14 @@ body {
   z-index: 2;
 }
 
-.actions__btn, .actions__link, .cta__btn {
+.revolutionary__btn, .actions__btn, .actions__link, .cta__btn {
   width: 100%;
   cursor: pointer;
   color: #000000;
   font-family: "Alexandria", sans-serif;
 }
 
-.testimonial__title, .blockchain__title, .statistic__title, .statistics__title, .features__title {
+.revolutionary__title, .testimonial__title, .blockchain__title, .statistic__title, .statistics__title, .features__title {
   font-size: 48px;
   line-height: 100%;
   font-weight: 400;
@@ -51,7 +51,7 @@ body {
   margin-bottom: 20px;
 }
 
-.testimonial__text, .blockchain__text, .statistic__text, .statistics__text, .features__text {
+.revolutionary__text, .testimonial__text, .blockchain__text, .statistic__text, .statistics__text, .features__text {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 140%;
@@ -669,11 +669,6 @@ body {
     margin: 0 auto 32px;
   }
 }
-@media (max-width: 767px) {
-  .blockchain__info {
-    max-width: 100%;
-  }
-}
 .blockchain_status {
   max-width: 94px;
   margin: 0 auto 20px;
@@ -819,15 +814,84 @@ body {
   padding: 80px 0 149px 0;
   background: #0F0F0F;
 }
+@media (max-width: 767px) {
+  .testimonial {
+    padding: 40px 0;
+  }
+}
 .testimonial__info {
   margin-bottom: 72px;
+}
+@media (max-width: 767px) {
+  .testimonial__info {
+    margin-bottom: 32px;
+  }
 }
 .testimonial__status {
   padding: 11px 0;
   max-width: 121px;
   margin: 0 auto 20px;
 }
+@media (max-width: 767px) {
+  .testimonial__status {
+    margin: 0 auto 16px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial__title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+}
 .testimonial__text {
   max-width: 644px;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .testimonial__text {
+    font-size: 16px;
+  }
+}
+
+.revolutionary {
+  padding: 80px 0;
+  background: #0F0F0F;
+}
+@media (max-width: 767px) {
+  .revolutionary {
+    padding: 40px 0;
+  }
+}
+.revolutionary__status {
+  padding: 11px 0;
+  margin: 0 auto 20px;
+}
+.revolutionary__title {
+  max-width: 878px;
+  margin: 0 auto 20px;
+}
+@media (max-width: 767px) {
+  .revolutionary__title {
+    font-size: 28px;
+  }
+}
+.revolutionary__text {
+  max-width: 644px;
+  margin: 0 auto 20px;
+}
+@media (max-width: 767px) {
+  .revolutionary__text {
+    font-size: 16px;
+  }
+}
+.revolutionary__btn {
+  display: block;
+  border: none;
+  margin: 0 auto;
+  max-width: 151px;
+  padding: 14px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  background: #9DFF3A;
 }/*# sourceMappingURL=style.css.map */
