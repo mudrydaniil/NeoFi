@@ -22,7 +22,7 @@ body {
   z-index: 2;
 }
 
-.statistics .container::before, .features .container::before, .banner .container::before {
+.testimonial .container::before, .statistics .container::before, .features .container::before, .banner .container::before {
   position: absolute;
   width: 49%;
   height: 82%;
@@ -41,7 +41,7 @@ body {
   font-family: "Alexandria", sans-serif;
 }
 
-.blockchain__title, .statistic__title, .statistics__title, .features__title {
+.testimonial__title, .blockchain__title, .statistic__title, .statistics__title, .features__title {
   font-size: 48px;
   line-height: 100%;
   font-weight: 400;
@@ -51,7 +51,7 @@ body {
   margin-bottom: 20px;
 }
 
-.blockchain__text, .statistic__text, .statistics__text, .features__text {
+.testimonial__text, .blockchain__text, .statistic__text, .statistics__text, .features__text {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 140%;
@@ -805,4 +805,26 @@ body {
     font-size: 14px;
     line-height: 17px;
   }
+}
+
+.testimonial .container {
+  position: relative;
+}
+
+.testimonial .container::before {
+  content: "";
+}
+
+.testimonial {
+  padding: 80px 0 149px 0;
+  background: #0F0F0F;
+}
+.testimonial__info {
+  max-width: 644px;
+  margin: 0 auto 72px;
+}
+.testimonial__status {
+  padding: 11px 0;
+  max-width: 121px;
+  margin: 0 auto 20px;
 }/*# sourceMappingURL=style.css.map */
