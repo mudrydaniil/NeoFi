@@ -905,23 +905,16 @@ body {
 }
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 690px 1fr;
-  -moz-column-gap: 126px;
-       column-gap: 126px;
-  margin-bottom: 40px;
-}
-.footer__content {
-  display: grid;
-  grid-template-columns: 107px 1fr;
+  grid-template-columns: 107px minmax(524px, 1fr) 1fr;
   -moz-column-gap: 92px;
        column-gap: 92px;
+  margin-bottom: 40px;
 }
 .footer__logo {
   align-items: flex-start;
 }
 .footer__columns {
-  display: grid;
-  grid-template-columns: 102px 84px 1fr;
+  display: flex;
   -moz-column-gap: 92px;
        column-gap: 92px;
 }
@@ -934,10 +927,9 @@ body {
   margin-bottom: 24px;
 }
 .footer__list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 8px;
-  list-style-type: none;
-  grid-template-columns: 1fr;
   list-style-type: none;
 }
 .footer__link {
