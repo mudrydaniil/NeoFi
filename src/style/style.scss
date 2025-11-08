@@ -12,8 +12,10 @@ $bgSecondary: #0F0F0F;
 $borderStatus: #2E2E2E;
 $borderColor: #4D4D4D;
 $titleColor: #E5E5E5;
+$titleForm: #D8D8D8;
 $neofiColor: #FFFFFF;
 $textHover: #E5E5E5;
+$btnShadow: #FFFFFF;
 $btnPrimaryText: #E5E5E5;
 $textPrimary: #999999;
 $textGreen: #9DFF3A;
@@ -930,15 +932,16 @@ body {
     }
 }
 
-.footer .container {
-    display: grid;
-    grid-template-columns: 690px 1fr;
-    column-gap: 126px;
-}
-
 .footer {
     padding: 120px 0 40px;
     background: $bgPrimary;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 690px 1fr;
+        column-gap: 126px;
+        margin-bottom: 40px;
+    }
 
     &__content {
         display: grid;
@@ -956,8 +959,6 @@ body {
         column-gap: 92px;
     }
 
-    // &__column {}
-
     &__title {
         font-family: $fontSecond;
         @include font(20px, 140%, 400);
@@ -966,20 +967,64 @@ body {
     }
 
     &__list {
+        display: grid;
+        row-gap: 8px;
         list-style-type: none;
-    }
-
-    &__item {
-        margin-bottom: 8px;
-    }
-
-    &__item:last-child {
-        margin-bottom: 0;
+        grid-template-columns: 1fr;
+        list-style-type: none;
     }
 
     &__link {
         @include font(14px, 17px, 400);
         text-decoration: none;
         color: $textPrimary;
+    }
+
+    &__text {
+        text-align: center;
+        @include font(12px, 15px, 400);
+        color: $textPrimary;
+    }
+}
+
+.form {
+
+    &__title {
+        @include font(20px, 140%, 400);
+        max-width: 198px;
+        margin-bottom: 20px;
+        color: $titleForm;
+        font-family: $fontSecond;
+    }
+
+    &__field {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        @include font(14px, 17px, 400);
+        background: transparent;
+        color: $textPrimary;
+        border: none;
+        outline: none;
+        padding: 11.5px 45px 27.5px 0;
+        border-bottom: 0.5px solid $textPrimary;
+    }
+
+    &__btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $iconNormal;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 20px $btnShadow;
     }
 }
