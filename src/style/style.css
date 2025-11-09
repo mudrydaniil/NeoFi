@@ -22,7 +22,7 @@ body {
   z-index: 2;
 }
 
-.testimonial-card::before, .promo__bg, .feature__bg {
+.testimonial-card::before, .promo__bg, .feature__bg, .status_bg::before {
   position: absolute;
   width: calc(100% + 2px);
   height: calc(100% + 2px);
@@ -497,11 +497,18 @@ body {
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
   margin: 0 auto 20px;
+  position: relative;
 }
 .status_bg {
+  position: relative;
   max-width: 137px;
   padding: 9px 0;
   margin: 0 0 24px 0;
+  border: none;
+}
+.status_bg::before {
+  content: "";
+  border-radius: 24px;
 }
 @media (max-width: 767px) {
   .status {
