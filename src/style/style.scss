@@ -18,6 +18,8 @@ $textHover: #E5E5E5;
 $btnShadow: #FFFFFF;
 $btnPrimaryText: #E5E5E5;
 $textPrimary: #999999;
+$commitCard: #EDEDF2;
+$textCard: #4d4d4d;
 $textGreen: #9DFF3A;
 $iconNormal: #9DFF3A;
 $bgFeature: rgba(255, 255, 255, 0.04);
@@ -53,6 +55,15 @@ body {
     width: 100%;
     height: 100%;
     z-index: 2;
+}
+
+%bg-border-styles {
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: -1px;
+    left: -1px;
+    background: $gradientLinear;
 }
 
 %bg-styles {
@@ -268,8 +279,6 @@ body {
             text-align: center;
             margin-bottom: 32px;
         }
-
-
     }
 
     &__title {
@@ -549,12 +558,7 @@ body {
     }
 
     &__bg {
-        position: absolute;
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
-        top: -1px;
-        left: -1px;
-        background: $gradientLinear;
+        @extend %bg-border-styles;
         border-radius: 12px;
     }
 
@@ -797,12 +801,7 @@ body {
     }
 
     &__bg {
-        position: absolute;
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
-        top: -1px;
-        left: -1px;
-        background: $gradientLinear;
+        @extend %bg-border-styles;
         border-radius: 20px;
     }
 
@@ -884,6 +883,74 @@ body {
         @media (max-width:$mobile) {
             font-size: 16px;
         }
+    }
+}
+
+.testimonialSwiper {
+    padding: 1px;
+}
+
+.testimonial-card {
+    position: relative;
+    max-width: 373px;
+    margin: 0 auto;
+
+    @media (max-width:$mobile) {
+        max-width: 343px;
+    }
+
+    &::before {
+        content: '';
+        @extend %bg-border-styles;
+        border-radius: 16px;
+    }
+
+    &__content {
+        position: relative;
+        background: $bgPrimary;
+        border-radius: 16px;
+        padding: 32px;
+
+        @media (max-width:$mobile) {
+            padding: 28px;
+        }
+    }
+
+    &__commit {
+        @include font(16px, 20px, 400);
+        color: $commitCard;
+        margin-bottom: 32px;
+    }
+
+    &__person {
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+    }
+
+    &__wrapper-image {
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        @include font(14px, 17px, 400);
+        background: linear-gradient(278deg, #fff 98.44%);
+        background-clip: text;
+        color: transparent;
+    }
+
+    &__text {
+        @include font(12px, 15px, 400);
+        color: $textCard;
     }
 }
 

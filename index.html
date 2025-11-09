@@ -7,6 +7,7 @@
     <title>NeoFi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
@@ -587,6 +588,84 @@
                 <p class="testimonial__text">Secure your digital assets with the peace of mind that comes from knowing
                     you are protected by the best technology in the blockchain space.</p>
             </div>
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__content">
+                                <p class="testimonial-card__commit">“AI streamlines international client coordination by
+                                    scheduling emails for optimal inbox timing.”</p>
+                                <div class="testimonial-card__person">
+                                    <div class="testimonial-card__wrapper-image">
+                                        <img src="./src/img/Person.png" alt="Kathryn Murphy"
+                                            class="testimonial-card__image">
+                                    </div>
+                                    <div class="testimonial-card__description">
+                                        <h4 class="testimonial-card__title">Kathryn Murphy</h4>
+                                        <p class="testimonial-card__text">Co-founder</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__content">
+                                <p class="testimonial-card__commit">“AI streamlines international client coordination by
+                                    scheduling emails for optimal inbox timing.”</p>
+                                <div class="testimonial-card__person">
+                                    <div class="testimonial-card__wrapper-image">
+                                        <img src="./src/img/Person.png" alt="Eleanor Pena"
+                                            class="testimonial-card__image">
+                                    </div>
+                                    <div class="testimonial-card__description">
+                                        <h4 class="testimonial-card__title">Eleanor Pena</h4>
+                                        <p class="testimonial-card__text">Co-founder</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__content">
+                                <p class="testimonial-card__commit">“AI streamlines international client coordination by
+                                    scheduling emails for optimal inbox timing.”</p>
+                                <div class="testimonial-card__person">
+                                    <div class="testimonial-card__wrapper-image">
+                                        <img src="./src/img/Person.png" alt="Darrell Steward"
+                                            class="testimonial-card__image">
+                                    </div>
+                                    <div class="testimonial-card__description">
+                                        <h4 class="testimonial-card__title">Darrell Steward</h4>
+                                        <p class="testimonial-card__text">Co-founder</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__content">
+                                <p class="testimonial-card__commit">“AI streamlines international client coordination by
+                                    scheduling emails for optimal inbox timing.”</p>
+                                <div class="testimonial-card__person">
+                                    <div class="testimonial-card__wrapper-image">
+                                        <img src="./src/img/Person.png" alt="Bessie Cooper"
+                                            class="testimonial-card__image">
+                                    </div>
+                                    <div class="testimonial-card__description">
+                                        <h4 class="testimonial-card__title">Bessie Cooper</h4>
+                                        <p class="testimonial-card__text">Co-founder</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
     </section>
 
@@ -707,6 +786,23 @@
         <p class="footer__text">© 2025. All rights reserved.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".testimonialSwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            speed: 1200,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+    </script>
 </body>
 
 </html>
