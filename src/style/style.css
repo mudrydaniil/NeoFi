@@ -467,9 +467,7 @@ body {
   margin: 0 auto 80px;
 }
 .features__status {
-  padding: 11px 0;
   max-width: 100px;
-  margin: 0 auto 20px;
 }
 @media (max-width: 767px) {
   .features__title {
@@ -492,30 +490,29 @@ body {
   -moz-column-gap: 8px;
        column-gap: 8px;
   width: 100%;
-  max-width: 137px;
-  padding: 9px 0;
+  padding: 11px 0;
   border: 1px solid #2E2E2E;
   border-radius: 24px;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 400;
-  color: #9DFF3A;
-  background-color: #000000;
+  background: #000000;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
+  margin: 0 auto 20px;
 }
-.status_linear {
-  margin-bottom: 24px;
-}
-@media (max-width: 1024px) {
-  .status {
-    margin-bottom: 20px;
-  }
+.status_bg {
+  max-width: 137px;
+  padding: 9px 0;
+  margin: 0 0 24px 0;
 }
 @media (max-width: 767px) {
   .status {
     margin: 0 auto 16px;
   }
+}
+.status__text {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #9DFF3A;
 }
 
 .feature {
@@ -610,8 +607,6 @@ body {
 }
 .statistics__status {
   max-width: 104px;
-  padding: 11px 0px;
-  margin: 0 auto 20px;
 }
 @media (max-width: 767px) {
   .statistics__title {
@@ -677,13 +672,6 @@ body {
 }
 .blockchain_status {
   max-width: 94px;
-  margin: 0 auto 20px;
-  padding: 11px 0;
-}
-@media (max-width: 767px) {
-  .blockchain_status {
-    margin: 0 auto 16px;
-  }
 }
 @media (max-width: 767px) {
   .blockchain__title {
@@ -828,14 +816,7 @@ body {
   }
 }
 .testimonial__status {
-  padding: 11px 0;
   max-width: 121px;
-  margin: 0 auto 20px;
-}
-@media (max-width: 767px) {
-  .testimonial__status {
-    margin: 0 auto 16px;
-  }
 }
 @media (max-width: 767px) {
   .testimonial__title {
@@ -933,8 +914,12 @@ body {
   }
 }
 .revolutionary__status {
-  padding: 11px 0;
-  margin: 0 auto 20px;
+  max-width: 137px;
+}
+@media (max-width: 767px) {
+  .revolutionary__status {
+    margin: 0 auto 20px;
+  }
 }
 .revolutionary__title {
   max-width: 878px;

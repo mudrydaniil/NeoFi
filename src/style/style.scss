@@ -268,8 +268,6 @@ body {
     }
 
     &__intro {
-        // position: relative;
-
         @media (max-width: $tablet) {
             max-width: 530px;
         }
@@ -477,13 +475,7 @@ body {
     }
 
     &__status {
-        padding: 11px 0;
         max-width: 100px;
-        margin: 0 auto 20px;
-
-        // @media (max-width:$mobile) {
-        //     margin: 0 auto 16px;
-        // }
     }
 
     &__title {
@@ -512,25 +504,34 @@ body {
     justify-content: center;
     column-gap: 8px;
     width: 100%;
-    max-width: 137px;
-    padding: 9px 0;
+    padding: 11px 0;
     border: 1px solid $borderStatus;
     border-radius: 24px;
-    @include font(14px, 17px, 400);
-    color: $textGreen;
-    background-color: $bgPrimary;
+    background: $bgPrimary;
     backdrop-filter: blur(40px);
+    margin: 0 auto 20px;
 
-    &_linear {
-        margin-bottom: 24px;
-    }
+    &_bg {
+        // position: relative;
+        max-width: 137px;
+        padding: 9px 0;
+        margin: 0 0 24px 0;
+        // border: none;
 
-    @media (max-width: $tablet) {
-        margin-bottom: 20px;
+        // &::before {
+        //     content: '';
+        //     @extend %bg-border-styles;
+        //     border-radius: 24px;
+        // }
     }
 
     @media (max-width:$mobile) {
         margin: 0 auto 16px;
+    }
+
+    &__text {
+        @include font(14px, 17px, 400);
+        color: $textGreen;
     }
 }
 
@@ -627,8 +628,6 @@ body {
 
     &__status {
         max-width: 104px;
-        padding: 11px 0px;
-        margin: 0 auto 20px;
     }
 
     &__title {
@@ -702,12 +701,6 @@ body {
 
     &_status {
         max-width: 94px;
-        margin: 0 auto 20px;
-        padding: 11px 0;
-
-        @media (max-width:$mobile) {
-            margin: 0 auto 16px;
-        }
     }
 
     &__title {
@@ -857,13 +850,7 @@ body {
     }
 
     &__status {
-        padding: 11px 0;
         max-width: 121px;
-        margin: 0 auto 20px;
-
-        @media (max-width:$mobile) {
-            margin: 0 auto 16px;
-        }
     }
 
     &__title {
@@ -963,8 +950,11 @@ body {
     }
 
     &__status {
-        padding: 11px 0;
-        margin: 0 auto 20px;
+        max-width: 137px;
+
+        @media (max-width:$mobile) {
+            margin: 0 auto 20px;
+        }
     }
 
     &__title {
