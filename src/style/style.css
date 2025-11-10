@@ -40,6 +40,7 @@ body {
   transform: translateX(-50%);
   background: rgba(74, 90, 236, 0.06);
   filter: blur(139.9px);
+  pointer-events: none;
   z-index: 2;
 }
 
@@ -514,7 +515,6 @@ body {
 
 .features .container::before {
   content: "";
-  height: 50%;
 }
 
 .features {
@@ -869,7 +869,6 @@ body {
 
 .testimonial .container::before {
   content: "";
-  height: 47%;
 }
 
 .testimonial {
