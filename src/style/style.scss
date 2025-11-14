@@ -28,6 +28,7 @@ $gradientGreen: linear-gradient(180deg, #75a941 0%, #3a7500 100%);
 $gradientLinear: linear-gradient(272.36deg,
         rgba(77, 77, 77, 0.6) -14.37%,
         rgba(179, 179, 179, 0.6)116.83%);
+$gradientSwiper: linear-gradient(83.45deg, #1B1B1B 4.91%, rgba(27, 27, 27, 0) 94.64%);
 $fillOne: rgb(74, 90, 236);
 $fillSecond: #45b7d1;
 $fillThree: #96ceb4;
@@ -51,6 +52,22 @@ body {
     font-size: $fontSize;
     line-height: $lineHeight;
     font-weight: $fontWeight;
+}
+
+%status-styles {
+    @include font(14px, 17px, 400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    width: 100%;
+    padding: 11px 0;
+    border: 1px solid $borderStatus;
+    border-radius: 24px;
+    background: $bgPrimary;
+    backdrop-filter: blur(40px);
+    margin: 0 auto 20px;
+    color: $textGreen;
 }
 
 %bg-white-styles {
@@ -290,6 +307,31 @@ body {
             margin-bottom: 32px;
         }
     }
+
+    &__status {
+        max-width: 137px;
+        padding: 1px;
+        margin: 0 0 24px 0;
+        border-radius: 24px;
+        border: none;
+
+        &_border {
+            background: $gradientLinear;
+        }
+    }
+
+    &__status-text {
+        @include font(14px, 17px, 400);
+        color: $textGreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 8px;
+        padding: 10px 0;
+        border-radius: 24px;
+        background: $bgPrimary;
+    }
+
 
     &__title {
         color: $titleColor;
@@ -563,6 +605,7 @@ body {
     }
 
     &__status {
+        @extend %status-styles;
         max-width: 100px;
     }
 
@@ -586,35 +629,18 @@ body {
     }
 }
 
-.status {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 8px;
-    width: 100%;
-    padding: 11px 0;
-    border: 1px solid $borderStatus;
-    border-radius: 24px;
-    background: $bgPrimary;
-    backdrop-filter: blur(40px);
-    margin: 0 auto 20px;
 
-    &_border {
-        max-width: 137px;
-        padding: 9px 0;
-        margin: 0 0 24px 0;
-        border: 1px solid $borderColor;
-    }
 
-    @media (max-width:$mobile) {
-        margin: 0 auto 16px;
-    }
+// &-text {
+//     @include font(14px, 17px, 400);
+//     color: $textGreen;
+// }
 
-    &__text {
-        @include font(14px, 17px, 400);
-        color: $textGreen;
-    }
-}
+// @media (max-width:$mobile) {
+//     margin: 0 auto 16px;
+// }
+
+
 
 .feature {
     display: grid;
@@ -713,6 +739,7 @@ body {
     }
 
     &__status {
+        @extend %status-styles;
         max-width: 104px;
     }
 
@@ -743,7 +770,6 @@ body {
         justify-content: center;
 
         @media (max-width:$mobile) {
-            display: flex;
             flex-direction: column;
             row-gap: 24px;
         }
@@ -786,6 +812,7 @@ body {
     }
 
     &_status {
+        @extend %status-styles;
         max-width: 94px;
     }
 
@@ -847,8 +874,11 @@ body {
     row-gap: 40px;
     max-width: 622px;
 
-    @media (max-width:$mobile) {
+    @media (max-width:$tablet) {
         max-width: 100%;
+    }
+
+    @media (max-width:$mobile) {
         row-gap: 16px;
     }
 
@@ -941,6 +971,7 @@ body {
     }
 
     &__status {
+        @extend %status-styles;
         max-width: 121px;
     }
 
@@ -966,12 +997,40 @@ body {
 
 .testimonialSwiper {
     padding: 1px;
+
+    &::before {
+        content: '';
+        background: $gradientSwiper;
+        width: 100px;
+        height: 206px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &::after {
+        content: '';
+        background: $gradientSwiper;
+        width: 100px;
+        height: 206px;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+
+}
+
+.swiper-slide {
+    max-width: 373px;
 }
 
 .testimonial-card {
-    position: relative;
     max-width: 373px;
-    margin: 0 auto;
+    position: relative;
 
     @media (max-width:$mobile) {
         max-width: 343px;
@@ -1019,7 +1078,7 @@ body {
         object-fit: cover;
     }
 
-    &__title {
+    &__author {
         @include font(14px, 17px, 400);
         background: linear-gradient(278deg, #fff 98.44%);
         background-clip: text;
@@ -1051,6 +1110,7 @@ body {
     }
 
     &__status {
+        @extend %status-styles;
         max-width: 137px;
 
         @media (max-width:$mobile) {
@@ -1192,17 +1252,6 @@ body {
 }
 
 .form {
-
-    @media (max-width:$tablet) {
-        width: 100%;
-        max-width: 385px;
-        margin: 0 auto;
-    }
-
-    @media (max-width:$mobile) {
-        max-width: 362px;
-        margin: 0 auto;
-    }
 
     &__title {
         @include font(20px, 140%, 400);

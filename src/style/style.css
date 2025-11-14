@@ -14,6 +14,26 @@ body {
   margin: 0 auto;
 }
 
+.revolutionary__status, .testimonial__status, .blockchain_status, .statistics__status, .features__status {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  width: 100%;
+  padding: 11px 0;
+  border: 1px solid #2E2E2E;
+  border-radius: 24px;
+  background: #000000;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  margin: 0 auto 20px;
+  color: #9DFF3A;
+}
+
 .promo__block::before {
   position: absolute;
   background: rgba(255, 255, 255, 0.04);
@@ -254,6 +274,30 @@ body {
     text-align: center;
     margin-bottom: 32px;
   }
+}
+.banner__status {
+  max-width: 137px;
+  padding: 1px;
+  margin: 0 0 24px 0;
+  border-radius: 24px;
+  border: none;
+}
+.banner__status_border {
+  background: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%);
+}
+.banner__status-text {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #9DFF3A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  padding: 10px 0;
+  border-radius: 24px;
+  background: #000000;
 }
 .banner__title {
   color: #E5E5E5;
@@ -547,39 +591,6 @@ body {
   }
 }
 
-.status {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-  width: 100%;
-  padding: 11px 0;
-  border: 1px solid #2E2E2E;
-  border-radius: 24px;
-  background: #000000;
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
-  margin: 0 auto 20px;
-}
-.status_border {
-  max-width: 137px;
-  padding: 9px 0;
-  margin: 0 0 24px 0;
-  border: 1px solid #4D4D4D;
-}
-@media (max-width: 767px) {
-  .status {
-    margin: 0 auto 16px;
-  }
-}
-.status__text {
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 400;
-  color: #9DFF3A;
-}
-
 .feature {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -702,7 +713,6 @@ body {
 }
 @media (max-width: 767px) {
   .statistics__list {
-    display: flex;
     flex-direction: column;
     row-gap: 24px;
   }
@@ -796,9 +806,13 @@ body {
   row-gap: 40px;
   max-width: 622px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .promo {
     max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .promo {
     row-gap: 16px;
   }
 }
@@ -910,11 +924,35 @@ body {
 .testimonialSwiper {
   padding: 1px;
 }
+.testimonialSwiper::before {
+  content: "";
+  background: linear-gradient(83.45deg, #1B1B1B 4.91%, rgba(27, 27, 27, 0) 94.64%);
+  width: 100px;
+  height: 206px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.testimonialSwiper::after {
+  content: "";
+  background: linear-gradient(83.45deg, #1B1B1B 4.91%, rgba(27, 27, 27, 0) 94.64%);
+  width: 100px;
+  height: 206px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.swiper-slide {
+  max-width: 373px;
+}
 
 .testimonial-card {
-  position: relative;
   max-width: 373px;
-  margin: 0 auto;
+  position: relative;
 }
 @media (max-width: 767px) {
   .testimonial-card {
@@ -961,7 +999,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.testimonial-card__title {
+.testimonial-card__author {
   font-size: 14px;
   line-height: 17px;
   font-weight: 400;
@@ -1133,19 +1171,6 @@ body {
   color: #999999;
 }
 
-@media (max-width: 1024px) {
-  .form {
-    width: 100%;
-    max-width: 385px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 767px) {
-  .form {
-    max-width: 362px;
-    margin: 0 auto;
-  }
-}
 .form__title {
   font-size: 20px;
   line-height: 140%;
