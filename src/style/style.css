@@ -945,13 +945,11 @@ body {
   top: 0;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
-
-.swiper-slide {
+.testimonialSwiper .swiper-slide {
   max-width: 373px;
 }
 
 .testimonial-card {
-  max-width: 373px;
   position: relative;
 }
 @media (max-width: 767px) {

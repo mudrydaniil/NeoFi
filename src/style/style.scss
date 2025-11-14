@@ -1021,15 +1021,12 @@ body {
         transform: matrix(-1, 0, 0, 1, 0, 0);
     }
 
-
-}
-
-.swiper-slide {
-    max-width: 373px;
+    .swiper-slide {
+        max-width: 373px;
+    }
 }
 
 .testimonial-card {
-    max-width: 373px;
     position: relative;
 
     @media (max-width:$mobile) {

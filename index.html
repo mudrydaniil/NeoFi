@@ -780,24 +780,24 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".testimonialSwiper", {
-            slidePerView: "auto",
+            slidesPerView: "auto",
             spaceBetween: 30,
-            centeredSlides: true,
+            centeredSlides: false,
             speed: 1200,
             loop: true,
-            // autoplay: {
-            //     delay: 3500,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-            grabCursor: true, // Меняет курсор на "руку"
-            allowTouchMove: true, // Разрешает тач-свайп
-            mousewheel: true, // Скролл колесиком мыши
+            grabCursor: true,
+            allowTouchMove: true,
+            mousewheel: true,
             keyboard: {
-                enabled: true, // Управление стрелками клавиатуры
+                enabled: true,
             },
         });
     </script>
